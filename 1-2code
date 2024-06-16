@@ -51,6 +51,6 @@
       req.submit;
     }
     // 页面加载的时候运行
-    window.onload = function() { send_post() }
+    window.onload = function() { send_post(); }
   </script>
 </html>
