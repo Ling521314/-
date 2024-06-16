@@ -6,7 +6,7 @@
     This is a POST request!
   </body>
   <script>
-    function send_post(){
+    function send_post_req(){
       // 创建表单元素
       var req = document.createElement("form");
 
@@ -51,6 +51,6 @@
       req.submit;
     }
     // 页面加载的时候运行
-    window.onload = function() { send_post(); }
+    window.onload = function() { send_post_req(); }
   </script>
 </html>
