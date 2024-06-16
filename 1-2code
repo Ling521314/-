@@ -4,7 +4,7 @@
   </head>
   <body>
     This is a POST request!
-    <script>
+    <script type="text/javascript">
       function send_post_req(){
   
         var req = document.createElement("form");
